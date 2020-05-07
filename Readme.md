@@ -23,8 +23,9 @@ __$ npm install__
 
 __$ npm run watch:sass__   
 
-*This is the script in package.json :*  
-  - `"watch:sass": "node-sass sass/main.scss css/style.css -w",` 
+*This is the script in package.json :* 
+
+ `"watch:sass": "node-sass sass/main.scss css/style.css -w",` 
 
 
 ***or if you prefer to use the npm server*** 
@@ -34,10 +35,12 @@ __$ npm install live-server -g__
 __$ npm run start__
 
 *This is the script in package.json :*  
+
  `"devserver": "live-server", "start": "npm-run-all --parallel devserver watch:sass",`
 
 ***add --browser option if you need*** :  
-  - `"devserver": "live-server --browser=firefox",`
+
+ `"devserver": "live-server --browser=firefox",`
 
 
 
@@ -48,13 +51,13 @@ __$ npm run build:css__
 
 *This is the script in package.json :*
 
-- It compiles all scss in css
+- It compiles all scss in css  
    `"compile:sass": "node-sass sass/main.scss css/style.comp.css",`
-- It prefixes with browsers prefix
+- It prefixes with browsers prefix  
    `"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",`
-- It compresses the output css file
+- It compresses the output css file  
    `"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",`
-- It runs the 3 commands above to be ready to production
+- It runs the 3 commands above to be ready to production  
    `"build:css": "npm-run-all compile:sass prefix:css compress:css"`
 
 
