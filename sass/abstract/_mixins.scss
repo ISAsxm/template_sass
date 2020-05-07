@@ -1,0 +1,42 @@
+/*
+All mixins must be in this file.
+*/
+
+// some examples of mixin to manage the media query
+
+// MEDIA QUERY MANAGER
+/*
+breakpoints size :
+0 - 600px == phone
+600 - 900px == tablet portrait
+900 - 1200px == tablet landscape
+1200 - 1800px == normal style (desktop first approach)
+1800px + == big desktop
+
+converting px to em to prevent if users change style size
+1em == 16px browser's style size by default
+600px/16px = 37.5em
+900px/16px = 56.25em
+1200px/16px = 75em
+1800px/16px = 112.5em
+
+$breakpoint argument choices:
+- phone,
+- tab-port,
+- tab-land,
+- big-desktop
+*/
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; // 600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content }; // 900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content }; // 1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content }; // 1800px
+    }
+}

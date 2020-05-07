@@ -1,0 +1,25 @@
+/*
+Everything about formatting useful and reusable independently for the appearance of certain elements should be here (ex: margins, padding,..), what we can define as utility css classes without having to modify whole components for example .
+some examples of these utility classes :
+.u-center-text { text-align: center !important; }
+.u-margin-top-big { margin-top: 8rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
+.u-margin-bottom-medium { 
+    
+    margin-bottom: 4rem !important;
+
+    @include responsive(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+
+}
+.u-margin-bottom-big { 
+    margin-bottom: 8rem !important;
+    
+    @include responsive(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+*/

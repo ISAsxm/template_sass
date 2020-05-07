@@ -1,0 +1,2 @@
+All compiled css will be written to this folder.
+This is also where additional .css files should be placed (such as an icon font file)

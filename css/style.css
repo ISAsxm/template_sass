@@ -1,0 +1,112 @@
+/*
+All _.scss files must be called in this file because it is it which will be compiled in css.
+*/
+/*
+All functions must be in this file
+*/
+/*
+All mixins must be in this file.
+*/
+/*
+breakpoints size :
+0 - 600px == phone
+600 - 900px == tablet portrait
+900 - 1200px == tablet landscape
+1200 - 1800px == normal style (desktop first approach)
+1800px + == big desktop
+
+converting px to em to prevent if users change style size
+1em == 16px browser's style size by default
+600px/16px = 37.5em
+900px/16px = 56.25em
+1200px/16px = 75em
+1800px/16px = 112.5em
+
+$breakpoint argument choices:
+- phone,
+- tab-port,
+- tab-land,
+- big-desktop
+*/
+/*
+All variables should be in this file. 
+*/
+/*
+All animations (@keyframes) should be in this file.
+*/
+/*
+Everything about basic and common formatting / settings for the overall look of the website / app should be here.
+Some examples of basic and commun settings :
+*/
+/* to reset all browser default behavior */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* define font-size to 10px makes easier to adapt the size of the children of html documents */
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+/*
+Everything related to typography should be in this file, such as family, font size, text color, etc. titles, paragraphs (except if they are an integral part of a component).
+*/
+/*
+Everything about formatting useful and reusable independently for the appearance of certain elements should be here (ex: margins, padding,..), what we can define as utility css classes without having to modify whole components for example .
+some examples of these utility classes :
+.u-center-text { text-align: center !important; }
+.u-margin-top-big { margin-top: 8rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
+.u-margin-bottom-medium { 
+    
+    margin-bottom: 4rem !important;
+
+    @include responsive(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+
+}
+.u-margin-bottom-big { 
+    margin-bottom: 8rem !important;
+    
+    @include responsive(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+*/
+/*
+All components e.g. buttons, cards, forms, ... should be in this folder.
+1 file per component and ideally the name of the file must be explicit eg: _button.scss, _card.scss, _form.scss
+*/
+/*
+Everything related to the footer must be included in this file.
+*/
+/*
+Everything related to the Header must be included in this file.
+*/
+/*
+Everything related to the principal nav must be included in this file.
+*/
+/*
+Everything on the layout of the pages of the application / site must be in this folder (1 file per page and the name of the file must be explicit (eg: _home.scss, _contact.scss, _about.scss, ... )
+*/
