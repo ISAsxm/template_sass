@@ -73,7 +73,7 @@ $ __npm run build:css__
 
 ---
 
-### Informations :  
+## Informations :  
 
 There are several examples and comments in all the directories.  
 Delete everything you don't need but respect the architecture of the application for it to work properly.  
