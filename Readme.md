@@ -15,11 +15,17 @@ Responsable : HI
 
 ### project init :  
 
+Change the name, version, description, author and license in package.json with your own data.  
+
+Then run :  
+
 $ __npm install__  
 
 ---
 
 ### dev environment :  
+
+Run this if you don't need npm server :
 
 $ __npm run watch:sass__   
 
@@ -28,10 +34,12 @@ $ __npm run watch:sass__
  `"watch:sass": "node-sass sass/main.scss css/style.css -w",`  
 
 
-***or if you prefer to use the npm server***  
+Or this if you prefer to use the npm server  :   
 
+***install npm live-server if you have not already done so :***
 $ __npm install live-server -g__   
 
+Then run :
 
 $ __npm run start__  
 
@@ -41,7 +49,7 @@ $ __npm run start__
 
 ***add --browser option if you need*** :   
 
- `"devserver": "live-server --browser=firefox",`  
+ `"devserver": "live-server --browser=firefox", "start": "npm-run-all --parallel devserver watch:sass",`  
 
 ---
 
