@@ -17,7 +17,7 @@ Responsable : HI
 
 $ __npm install__  
 
-
+---
 
 ### dev environment :  
 
@@ -43,7 +43,7 @@ $ __npm run start__
 
  `"devserver": "live-server --browser=firefox",`  
 
-
+---
 
 ### prod environment :  
 
@@ -71,7 +71,7 @@ $ __npm run build:css__
 `"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",`   
 `"build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"`   
 
-
+---
 
 ### Informations :  
 
